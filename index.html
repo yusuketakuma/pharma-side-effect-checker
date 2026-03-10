@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>副作用リスク評価ツール | 薬剤師向け無料ツール</title>
   <meta name="description" content="患者の併用薬から副作用リスクを評価する無料ツール。薬剤師が処方監査で活用できる副作用チェックリストを自動生成します。">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "副作用リスク評価ツール",
+    "description": "患者の併用薬から副作用リスクを評価する無料ツール。薬剤師が処方監査で活用できる副作用チェックリストを自動生成します。",
+    "url": "https://yusuketakuma.github.io/pharma-side-effect-checker/",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "薬剤師"
+    },
+    "inLanguage": "ja"
+  }
+  </script>
   <meta property="og:title" content="副作用リスク評価ツール | 薬剤師向け無料ツール">
   <meta property="og:description" content="患者の併用薬から副作用リスクを評価する無料ツール。薬剤師が処方監査で活用できる副作用チェックリストを自動生成します。">
   <meta property="og:type" content="website">
@@ -238,6 +259,47 @@
       .links-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <!-- Google tag (gtag.js) - 測定IDを差し替えてください -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+
+    function trackPromptCTA() {
+      gtag('event', 'cta_click', {
+        'event_category': 'monetization',
+        'event_label': 'ai_prompts',
+        'product_name': 'AIプロンプト集',
+        'price': 300
+      });
+    }
+
+    function trackNotionCTA() {
+      gtag('event', 'cta_click', {
+        'event_category': 'monetization',
+        'event_label': 'notion_template',
+        'product_name': 'Notionテンプレート',
+        'price': 500
+      });
+    }
+
+    function trackToolUsage(actionType) {
+      gtag('event', 'tool_usage', {
+        'event_category': 'engagement',
+        'event_label': '副作用リスク評価',
+        'action_type': actionType
+      });
+    }
+
+    function trackCopyAction() {
+      gtag('event', 'copy_action', {
+        'event_category': 'engagement',
+        'event_label': 'side_effect_result'
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -381,6 +443,10 @@
     </div>
 
     <div class="links">
+<!-- ポータルサイト -->
+            <div style="text-align: center; margin: 24px 0;">
+                <a href="https://yusuketakuma.github.io/pharma-free-tools/" target="_blank" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);">🏠 全ツール一覧（ポータルサイト）</a>
+            </div>
       <div class="links-title">🔗 他の無料ツール</div>
       <div class="links-grid">
         <a href="https://yusuketakuma.github.io/pharma-drug-price-tool/" class="link-item">薬価シミュレーター</a>
@@ -1111,5 +1177,46 @@
       });
     }
   </script>
+  <!-- 収益化CTA -->
+  <section style="margin-top: 32px; padding: 24px; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-radius: 16px; border: 1px solid #bfdbfe;">
+    <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #1e40af;">🎁 さらに業務を効率化しませんか？</h3>
+    <div style="margin-bottom: 16px;">
+      <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>📖 薬剤師向けAIプロンプト集</strong></p>
+      <p style="font-size: 0.85rem; color: #555; margin-bottom: 8px;">ChatGPT/Claudeで時短する100+のプロンプトテンプレート</p>
+      <p style="font-size: 1rem; font-weight: 600; color: #1e40af;">¥300</p>
+    </div>
+    <div style="margin-bottom: 16px;">
+      <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>📋 薬局業務Notionテンプレート</strong></p>
+      <p style="font-size: 0.85rem; color: #555; margin-bottom: 8px;">訪問記録・在庫管理・患者管理を一元化</p>
+      <p style="font-size: 1rem; font-weight: 600; color: #1e40af;">¥500</p>
+    </div>
+    <p style="font-size: 0.8rem; color: #666;">※ 準備中（近日公開）</p>
+  </section>
+
+  <div style="margin-top: 24px; background: white; border-radius: 12px; padding: 16px;">
+    <div style="font-size: 1rem; font-weight: 600; margin-bottom: 12px; color: #1a1a2e; border-bottom: 2px solid #4a90d9; padding-bottom: 6px;">🔗 他の無料ツール</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+      <a href="https://yusuketakuma.github.io/pharma-drug-price-tool/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">薬価計算</a>
+      <a href="https://yusuketakuma.github.io/pharma-medication-history-tool/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">薬歴テンプレート</a>
+      <a href="https://yusuketakuma.github.io/pharma-medication-guidance/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">服薬指導チェック</a>
+      <a href="https://yusuketakuma.github.io/pharma-renal-dose-tool/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">腎機能別用量</a>
+      <a href="https://yusuketakuma.github.io/pharma-efficiency-diagnosis/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">業務効率化診断</a>
+      <a href="https://yusuketakuma.github.io/pharma-prescription-checklist/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">処方チェック</a>
+      <a href="https://yusuketakuma.github.io/pharma-inquiry-email/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">疑義照会メール</a>
+      <a href="https://yusuketakuma.github.io/pharma-medication-summary/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">薬歴サマリー</a>
+      <a href="https://yusuketakuma.github.io/pharma-side-effect-checker/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">副作用リスク</a>
+      <a href="https://yusuketakuma.github.io/pharma-medication-calendar/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">服薬カレンダー</a>
+      <a href="https://yusuketakuma.github.io/pharma-prescription-screening/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">処方鑑別</a>
+      <a href="https://yusuketakuma.github.io/pharma-di-query/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">DI照会生成</a>
+      <a href="https://yusuketakuma.github.io/pharma-bringing-medicine/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">持参薬チェック</a>
+      <a href="https://yusuketakuma.github.io/pharma-inventory-alert/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">在庫アラート</a>
+      <a href="https://yusuketakuma.github.io/pharma-adherence-check/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">アドヒアランス</a>
+      <a href="https://yusuketakuma.github.io/pharma-similar-drug-check/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">類似薬名</a>
+      <a href="https://yusuketakuma.github.io/pharma-polypharmacy/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">ポリファーマシー</a>
+      <a href="https://yusuketakuma.github.io/pharma-medication-guidance-scenario/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">服薬指導シナリオ</a>
+      <a href="https://yusuketakuma.github.io/pharma-fee-calculator/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">調剤報酬計算</a>
+      <a href="https://yusuketakuma.github.io/pharma-homecare-report/" style="color: #4a90d9; text-decoration: none; padding: 4px 8px; background: #e8f4fd; border-radius: 4px; font-size: 0.75rem;">在宅医療報告書</a>
+    </div>
+  </div>
 </body>
 </html>
